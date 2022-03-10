@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "hM+kNM6JV1yIX7pz5haPPNLL/txC507HuvpNM1WB1n70auuPcvZF/Ye+I1Wfrr7lhQQfUuIS0uGouAkcJhHWFw==",
+  "dgSpecHash": "44c10Gy/F0xC61m287rOfLPs4C6te0WrMRYOXDFd0hHs0oIn+LUFYojfnQN5emJI1AWALALmf7iedxUnk+tIJA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ALPER\\Desktop\\RESTApiProject\\CommanderApi\\CommanderApi.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\ALPER\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
+    "C:\\Users\\ALPER\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\ALPER\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "C:\\Users\\ALPER\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
     "C:\\Users\\ALPER\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

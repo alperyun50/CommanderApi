@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using CommanderApi.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,9 +34,10 @@ namespace CommanderApi
 
             services.AddControllers();
             
-            // added for service lifetimes
-            //services.AddScoped<ICommanderRepo, MockCommanderRepo>();
+            // auto mapper for DTOs
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
+            // added for service lifetimes
             services.AddScoped<ICommanderRepo, SqlCommanderRepo>();
         }
 
