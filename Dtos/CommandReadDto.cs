@@ -1,6 +1,4 @@
 
-
-
 namespace CommanderApi.Dtos
 {
     public class CommandReadDto
