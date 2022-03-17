@@ -43,7 +43,7 @@ namespace CommanderApi.Controllers
             return NotFound();
         }
 
-        // check this for error management
+        // check this for error management!..
         // POST api/commands
         [HttpPost]
         public ActionResult<CommandReadDto> CreateCommand(CommandCreateDto commandCreateDto)
@@ -56,7 +56,28 @@ namespace CommanderApi.Controllers
             var commandReadDto = _mapper.Map<CommandCreateDto>(commandModel);
 
             return CreatedAtRoute(nameof(GetCommandById), new {Id = commandModel});
-            //return Ok(commandReadDto);
+            
+        }
+
+        // PUT api/commands/{id}
+        [HttpPut("{id:int}")]
+        public ActionResult UpdateCommand(int id, CommandUpdateDto commandUpdateDto)
+        {
+            var commandModelFromRepo = _repository.GetCommandById(id);
+            if(commandModelFromRepo == null)
+            {
+                return NotFound();
+            }
+
+            // please check this pattern later!..
+            _mapper.Map(commandUpdateDto, commandModelFromRepo);
+
+            _repository.UpdateCommand(commandModelFromRepo);
+
+            _repository.SaveChanges();
+
+            return NoContent();
+
         }
     }
-}
+} 
